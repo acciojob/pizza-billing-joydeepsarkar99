@@ -13,7 +13,8 @@ public class Pizza {
     }
 
     public int getPrice(){
-        return this.price;
+        if(this.isVeg) return this.price += 300;
+        return this.price += 400;
     }
 
     public void addExtraCheese(){
@@ -30,7 +31,7 @@ public class Pizza {
     }
 
     public String getBill(){
-        this.bill = this.price + " ";
+        this.bill = this.price + "";
         return this.bill;
     }
 }
